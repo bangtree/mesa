@@ -17,7 +17,8 @@ def agent_draw(agent):
         portrayal = {"Shape": "arrowHead",
                      "Filled": "true",
                      "Layer": 2,
-                     "Color": "green",
+                     "Color": ["#00FF00", "#99FF99"],
+                     "stroke_color": "#666666",
                      "Filled": "true",
                      "heading_x": agent.heading[0],
                      "heading_y": agent.heading[1],
@@ -40,6 +41,7 @@ def launch_shape_model():
     server.max_steps = 0
     server.port = 8521
     server.launch()
+
 
 if __name__ == "__main__":
     random.seed(3)
